@@ -3,10 +3,13 @@
 function deleteButton(event) {
     console.log('trying to delete');
 
+    event.target.parentElement.parentElement.remove();
     
 }
 
-function submitButt(event) {
+let monthlyCap = 20000;
+
+function submitButton(event) {
     console.log('trying to button');
     event.preventDefault();
 
@@ -26,18 +29,28 @@ function submitButt(event) {
 
     console.log(getFirstNameInput, getLastNameInput, getIdInput, getTitleInput, getSalaryInput);
 
+    //setting the table body to the html spot
     let tableBody = document.getElementById('tableBody');
-
+    
+    //adding input into the table
     tableBody.innerHTML +=
     ` <tr>
     <td>${getFirstNameInput}</td>
     <td>${getLastNameInput}</td>
     <td>${getIdInput}</td>
     <td>${getTitleInput}</td>
-    <td>${getSalaryInput}</td>
+    <td>$${getSalaryInput}</td>
     <td><button onclick='deleteButton(event)'>delete</button></td>
   </tr>
   `
 
   console.log('we are trying to add to table body', tableBody);
 }
+
+function stoppingSalary() {
+    console.log('doing math');
+    if (monthlyCap < 0) {
+        
+    }
+}
+
