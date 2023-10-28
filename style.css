@@ -3,9 +3,15 @@ footer {
     font-size: 150%;
 }
 
-
 submitButton {
-align-items: right;
+align-items: end;
+}
+
+header {
+  background-color: gray;
+  color: white;
+  text-align: center;
+
 }
 
 
@@ -53,7 +59,7 @@ input {
     padding: .5em;
     width: 150px;
     background: #FCFCFC;
-    border: 1px solid;
+    border: 2px solid;
   }
   button {
     padding: .5em;

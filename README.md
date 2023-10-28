@@ -18,7 +18,7 @@ Your project description goes here. What problem did you solve? How did you solv
 //now we have to put the new part that calculates the annual salary
 //and if the annual salary exceeds the monthly cap
 //make the footer number turn red
-//
+//test everything and turn in
 
 
 

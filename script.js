@@ -51,16 +51,19 @@ function submitButton(event) {
 
   console.log('this is the new monthly cap', monthlyCap);
 
+  //changes on the screen
   document.getElementById('over-budget').innerHTML -= getSalaryInput / 12;
-
+//'Total Monthly: $',
   
-  
+  //if this works it will turn red when goes over budget
   if (monthlyCap < 0) {
         console.log('we spent way to much money', monthlyCap);
-        //document.getElementById('over-budget').value
+        document.getElementById('over-budget').style.color = "red";
+        
   }
 
 
 }
+
 
 
