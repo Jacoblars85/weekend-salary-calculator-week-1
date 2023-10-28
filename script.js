@@ -7,7 +7,7 @@ function deleteButton(event) {
     
 }
 
-let monthlyCap = 20000;
+let monthlyCap = 0;
 
 function submitButton(event) {
     console.log('trying to button');
@@ -34,7 +34,8 @@ function submitButton(event) {
     
     //adding input into the table
     tableBody.innerHTML +=
-    ` <tr>
+    ` 
+    <tr>
     <td>${getFirstNameInput}</td>
     <td>${getLastNameInput}</td>
     <td>${getIdInput}</td>
@@ -47,16 +48,15 @@ function submitButton(event) {
   console.log('we are trying to add to table body', tableBody);
 
   //divides the salary to the months
-  monthlyCap -= getSalaryInput / 12;
+  monthlyCap += getSalaryInput / 12;
 
   console.log('this is the new monthly cap', monthlyCap);
 
   //changes on the screen
-  document.getElementById('over-budget').innerHTML -= getSalaryInput / 12;
-//'Total Monthly: $',
+  document.getElementById('over-budget').innerHTML = 'Total Monthly: $' + monthlyCap;
   
   //if this works it will turn red when goes over budget
-  if (monthlyCap < 0) {
+  if (monthlyCap > 20000) {
         console.log('we spent way to much money', monthlyCap);
         document.getElementById('over-budget').style.color = "red";
         
