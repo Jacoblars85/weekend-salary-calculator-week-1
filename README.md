@@ -15,7 +15,7 @@ Your project description goes here. What problem did you solve? How did you solv
 //get the employee row added to the table
 //check it
 //make the function to delete the new row
-//now we have to make a function that calculates the annual salary
+//now we have to put the new part that calculates the annual salary
 //and if the annual salary exceeds the monthly cap
 //make the footer number turn red
 //

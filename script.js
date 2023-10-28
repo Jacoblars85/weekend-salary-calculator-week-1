@@ -45,12 +45,20 @@ function submitButton(event) {
   `
 
   console.log('we are trying to add to table body', tableBody);
+
+  //divides the salary to the months
+  monthlyCap -= getSalaryInput / 12;
+
+  console.log('this is the new monthly cap', monthlyCap);
+
+  monthlyCap -= document.getElementsByClassName('over-budget').innerHTML;
+  
+  if (monthlyCap < 0) {
+        console.log('we spent way to much money', monthlyCap);
+        document.getElementsByClassName('over-budget').value
+  }
+
+
 }
 
-function stoppingSalary() {
-    console.log('doing math');
-    if (monthlyCap < 0) {
-        
-    }
-}
 
