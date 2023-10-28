@@ -51,11 +51,13 @@ function submitButton(event) {
 
   console.log('this is the new monthly cap', monthlyCap);
 
-  monthlyCap -= document.getElementsByClassName('over-budget').innerHTML;
+  document.getElementById('over-budget').innerHTML -= getSalaryInput / 12;
+
+  
   
   if (monthlyCap < 0) {
         console.log('we spent way to much money', monthlyCap);
-        document.getElementsByClassName('over-budget').value
+        //document.getElementById('over-budget').value
   }
 
 
